@@ -117,8 +117,27 @@ languagelearningmod/
 ```
 
 ## Known Issues
-- No known issues currently
-- Audio system ready but requires .ogg files to be added manually
+
+### Build Issues (Current)
+- **Network Timeouts**: `./gradlew build` fails with connection timeouts to `maven.minecraft.net`
+  - Error: "Connect to maven.minecraft.net:443 failed: Connect timed out"
+  - Affects both `net.minecraft:client:1.20.1` and `cpw.mods:bootstraplauncher:1.1.2` dependencies
+  - Workaround: Use `./gradlew runClient` for development testing (bypasses JAR build)
+- **Repository Access**: Maven repositories occasionally unreachable
+  - Added fallback repositories (mavenCentral, maven.minecraftforge.net) to build.gradle
+  - May require network/firewall configuration or VPN
+
+### Development Status
+- **Core Code**: ✅ Complete and ready
+- **JAR Build**: ❌ Blocked by network issues
+- **Testing**: ✅ Available via `./gradlew runClient`
+- **Audio System**: ✅ Ready but requires .ogg files to be added manually
+
+### Recommended Next Steps
+1. Try `./gradlew runClient` for immediate testing
+2. Investigate network connectivity to maven.minecraft.net
+3. Consider using offline build: `./gradlew build --offline` (after successful online setup)
+4. Alternative: Set up development on machine with better Maven access
 
 ## Testing Checklist
 - [ ] Mod loads without errors

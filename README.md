@@ -122,18 +122,52 @@ languagelearningmod/
 
 ## 🐛 Troubleshooting
 
-### Mod won't load
+### Build Issues (Known Problems)
+
+#### Network Timeout Errors
+**Problem**: `./gradlew build` fails with connection timeouts
+```
+Could not GET 'https://maven.minecraft.net/...'
+Connect to maven.minecraft.net:443 failed: Connect timed out
+```
+
+**Solutions**:
+1. **Use development client** (recommended): `./gradlew runClient`
+2. **Try offline build**: `./gradlew build --offline` (after online setup)
+3. **Network troubleshooting**:
+   - Check firewall/antivirus blocking Maven repositories
+   - Try different network (mobile hotspot, VPN)
+   - Verify internet connectivity to maven.minecraft.net
+
+#### Java Installation Issues
+**Problem**: "Invalid Java installation found at '/usr/lib/jvm/openjdk-17'"
+
+**Solution**: Ensure Java 17 is properly installed
+```bash
+sudo apt install openjdk-17-jdk
+java -version  # Should show version 17
+```
+
+### Runtime Issues
+
+#### Mod won't load
 - Check you have **Java 17** installed
 - Verify **Forge 1.20.1** is properly installed
 - Make sure JAR is in the correct `mods` folder
 
-### F key doesn't work  
+#### F key doesn't work  
 - Check key binding in Minecraft Controls settings
 - Look for "Language Learning" → "Show Translation"
 
-### No translations showing
+#### No translations showing
 - Ensure you're pointing directly at blocks/items/entities
 - Check the console/logs for any error messages
+
+### Current Status
+- ✅ **Source code**: Complete and functional
+- ❌ **JAR build**: Blocked by network connectivity issues
+- ✅ **Development testing**: Working via `./gradlew runClient`
+- ✅ **Git repository**: https://github.com/Aufco/languagelearningmod
 
 ## 📈 Future Enhancements
 
