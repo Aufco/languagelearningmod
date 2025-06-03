@@ -49,6 +49,11 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    mavenCentral()
+    maven {
+        name = 'MinecraftForge'
+        url = 'https://maven.minecraftforge.net'
+    }
     maven {
         name = 'Official Minecraft Mapping'
         url = 'https://maven.minecraft.net/'
