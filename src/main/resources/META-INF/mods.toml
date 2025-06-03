@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="languagelearningmod"
+version="1.0.0"
+displayName="Language Learning Mod"
+updateJSONURL=""
+displayURL=""
+logoFile=""
+credits="Created for language learning in Minecraft"
+authors="Ben"
+description='''
+A mod that helps learn Spanish by displaying both English and Spanish names for blocks, items, and entities when pressing F.
+'''
+
+[[dependencies.languagelearningmod]]
+modId="forge"
+mandatory=true
+versionRange="[47.2.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.languagelearningmod]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1]"
+ordering="NONE"
+side="BOTH"

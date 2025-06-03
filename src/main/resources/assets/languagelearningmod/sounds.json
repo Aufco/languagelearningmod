@@ -1,0 +1,24 @@
+{
+  "block_minecraft_stone": {
+    "category": "master",
+    "subtitle": "Stone pronunciation",
+    "sounds": [
+      {
+        "name": "languagelearningmod:sounds/block_minecraft_stone",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "item_minecraft_diamond_sword": {
+    "category": "master", 
+    "subtitle": "Diamond Sword pronunciation",
+    "sounds": [
+      {
+        "name": "languagelearningmod:sounds/item_minecraft_diamond_sword",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  }
+}
